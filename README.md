@@ -1,44 +1,46 @@
 # 🐝 BeeCrowd Challenges — Java
 
-Este repositório contém a resolução de **desafios da plataforma BeeCrowd**, desenvolvidos em **Java**, com foco no aprimoramento de lógica de programação e conceitos da linguagem.
+This repository contains solutions to **BeeCrowd platform challenges**, developed in **Java**, with a focus on improving programming logic and core language concepts.
 
-## 📌 Organização do Repositório
+## 📌 Repository Organization
 
-- Cada **branch** representa **um desafio específico** do BeeCrowd
-- O nome da branch corresponde ao **número do problema**
-- O código de cada desafio é **independente**, facilitando o estudo e a navegação
+- Each **branch** represents **a specific BeeCrowd challenge**
+- The branch name corresponds to the **problem number**
+- Each challenge’s code is **self-contained**, making it easy to study and navigate
 
-## 💻 Tecnologias Utilizadas
+## 💻 Technologies Used
 
 - Java
 - IDE: IntelliJ IDEA
-- Conceitos aplicados:
-    - Estruturas de decisão
-    - Laços de repetição
+- Applied concepts:
+    - Conditional statements
+    - Loops
     - Arrays
-    - Entrada e saída de dados
-    - Programação orientada a objetos (quando aplicável)
+    - Input and output handling
+    - Object-oriented programming (when applicable)
 
-## 🎯 Objetivo
+## 🎯 Purpose
 
-Este repositório tem como objetivo:
-- Praticar lógica de programação
-- Consolidar o aprendizado em Java
-- Servir como material de estudo e consulta futura
+This repository aims to:
+- Practice programming logic
+- Strengthen Java skills
+- Serve as study material and future reference
 
-1. Clone o repositório:
+## 🚀 How to Use
+
+1. Clone the repository:
    ```bash
    git clone https://github.com/barbaramazevedo/BeeCrowd.git
    ```
-2. Acesse a branch do desafio desejado:
+2. Switch to the desired challenge branch:
     ```bash
-    git checkout nome-da-branch
+    git checkout branc-name
    ```
-4. Garanta que está na pasta correta:
+3. Make sure you are in the correct directory:
    ```bash
-   cd "C:\User\caminho-correto-da-pasta"
+   cd "C:\User\correct-folder-path"
     ```
-5. Execute o código pela sua IDE ou via terminal
+4. Run the code using your IDE or via terminal:
      ```bash
    java org.example.Main
     ```
