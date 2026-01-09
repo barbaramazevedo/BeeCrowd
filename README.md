@@ -1,47 +1,12 @@
-# 🐝 BeeCrowd Challenges — Java
+Welcome to beecrowd!
 
-This repository contains solutions to **BeeCrowd platform challenges**, developed in **Java**, with a focus on improving programming logic and core language concepts.
+Your first program in any programming language is usually "Hello World!". In this first problem all you have to do is print this message on the screen.
 
-## 📌 Repository Organization
+Input
+This problem has no input.
 
-- Each **branch** represents **a specific BeeCrowd challenge**
-- The branch name corresponds to the **problem number**
-- Each challenge’s code is **self-contained**, making it easy to study and navigate
+Output
+You must print the message Hello World! and then the endline as shown below.
 
-## 💻 Technologies Used
-
-- Java
-- IDE: IntelliJ IDEA
-- Applied concepts:
-    - Conditional statements
-    - Loops
-    - Arrays
-    - Input and output handling
-    - Object-oriented programming (when applicable)
-
-## 🎯 Purpose
-
-This repository aims to:
-- Practice programming logic
-- Strengthen Java skills
-- Serve as study material and future reference
-
-## 🚀 How to Use
-
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/barbaramazevedo/BeeCrowd.git
-   ```
-2. Switch to the desired challenge branch:
-    ```bash
-    git checkout branc-name
-   ```
-3. Make sure you are in the correct directory:
-   ```bash
-   cd "C:\User\correct-folder-path"
-    ```
-4. Run the code using your IDE or via terminal:
-     ```bash
-   java org.example.Main
-    ```
-
+Input Sample	Output Sample
+Hello World!
