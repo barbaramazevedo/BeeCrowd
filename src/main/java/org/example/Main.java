@@ -4,8 +4,7 @@ import java.util.Locale;
 
 public class Main {
     public static void main(String[] args) {
-        Scanner Sc = new Scanner(System.in);
-        Scanner sc = new Scanner(System.in).useLocale(Locale.US);
+        Scanner sc = new Scanner(System.in);
 
         int A = sc.nextInt();
         int B = sc.nextInt();
