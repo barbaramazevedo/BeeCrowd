@@ -1,10 +1,10 @@
-# 🐝 BeeCrowd — Problem 1003: Simple Sum
+# 🐝 BeeCrowd — Problem 1004: Simple Product
 
 ## 📌 Problem Description
 
-Read two integer values, **A** and **B**.  
-Calculate the sum of these values and store the result in the variable **SOMA**.  
-Print the value of this variable exactly as specified.
+Read two integer values.  
+Calculate the product of these values and store the result in a variable named **PROD**.  
+Print the result exactly as shown in the examples below.
 
 ⚠️ **Attention:**  
 Do not forget to print a line break after the output; otherwise, a **Presentation Error** may occur.
@@ -19,9 +19,9 @@ The input file contains **two integer numbers**, one per line.
 
 ## 📤 Output
 
-Print the message **`SOMA =`** (in uppercase), with a blank space before and after the equal sign, followed by the sum of **A** and **B**, according to the format below:
+Print the message **`PROD =`**, with a blank space before and after the equal sign, followed by the value of **PROD**, according to the format below:
 
-SOMA = value
+PROD = value
 
 yaml
 Copiar código
@@ -31,16 +31,14 @@ Copiar código
 ## 🧪 Examples
 
 ### Input
-
-30
-10
+3
+9
 
 shell
 Copiar código
 
 ### Output
-
-SOMA = 40
+PROD = 27
 
 yaml
 Copiar código
@@ -48,7 +46,6 @@ Copiar código
 ---
 
 ### Input
-
 -30
 10
 
@@ -56,8 +53,7 @@ shell
 Copiar código
 
 ### Output
-
-SOMA = -20
+PROD = -300
 
 yaml
 Copiar código
@@ -65,13 +61,11 @@ Copiar código
 ---
 
 ### Input
-
 0
-0
+9
 
 shell
 Copiar código
 
 ### Output
-
-SOMA = 0
+PROD = 0
