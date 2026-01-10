@@ -1,35 +1,27 @@
-# 🐝 BeeCrowd — Problem 1005: Average 1
+# 🐝 BeeCrowd — Problem 1006: Average 2
 
 ## 📌 Problem Description
 
-Read two floating-point values (**double precision**) **A** and **B**, corresponding to two student grades.  
-Calculate the student's average, considering the following weights:
+Read three values (**A**, **B**, and **C**), which represent a student’s grades.  
+Calculate the student’s average considering the following weights:
 
-- Grade **A** has weight **3.5**
-- Grade **B** has weight **7.5**
+- Grade **A** has weight **2**
+- Grade **B** has weight **3**
+- Grade **C** has weight **5**
 
-Each grade ranges from **0.0 to 10.0**, always with **one digit after the decimal point**.
-
-⚠️ **Attention:**  
-Do not forget to print a line break after the output; otherwise, a **Presentation Error** may occur.  
-Also, remember to include a blank space before and after the equal sign.
+Each grade ranges from **0.0 to 10.0**, always with **one decimal place**.
 
 ---
 
 ## 📥 Input
 
-The input file contains **two floating-point values**, each with **one digit after the decimal point**.
+The input file contains **three floating-point values** (**double precision**), each with **one digit after the decimal point**, one per line.
 
 ---
 
 ## 📤 Output
 
-Print the message **`MEDIA =`** (average in Portuguese), followed by the student's average, formatted with **five digits after the decimal point**, according to the format below:
-
-MEDIA = value
-
-yaml
-Copiar código
+Print the message **`MEDIA =`** (average in Portuguese), with a blank space before and after the equal sign, followed by the student’s average, according to the format shown in the examples below.
 
 ---
 
@@ -37,13 +29,14 @@ Copiar código
 
 ### Input
 5.0
-7.1
+6.0
+7.0
 
 shell
 Copiar código
 
 ### Output
-MEDIA = 6.43182
+MEDIA = 6.3
 
 yaml
 Copiar código
@@ -51,14 +44,15 @@ Copiar código
 ---
 
 ### Input
-0.0
-7.1
+5.0
+10.0
+10.0
 
 shell
 Copiar código
 
 ### Output
-MEDIA = 4.84091
+MEDIA = 9.0
 
 yaml
 Copiar código
@@ -68,9 +62,10 @@ Copiar código
 ### Input
 10.0
 10.0
+5.0
 
 shell
 Copiar código
 
 ### Output
-MEDIA = 10.00000
+MEDIA = 7.5
