@@ -6,13 +6,18 @@ public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in).useLocale(Locale.US);
 
-        int number = sc.nextInt();
-        int hoursWorked = sc.nextInt();
-        double priceHour = sc.nextDouble();
+        int codeProduct1 = sc.nextInt();
+        int unitsProduct1 = sc.nextInt();
+        double priceProduct1 = sc.nextDouble();
 
-        double salary = hoursWorked * priceHour;
+        int codeProduct2 = sc.nextInt();
+        int unitsProduct2 = sc.nextInt();
+        double priceProduct2 = sc.nextDouble();
 
-        System.out.println("NUMBER = " + number);
-        System.out.printf("SALARY = U$ %.2f%n", salary);
+        double amount = unitsProduct1 * priceProduct1 + unitsProduct2 * priceProduct2;
+
+        System.out.printf(Locale.US, "VALOR A PAGAR: R$ %.2f%n", amount);
+
+        sc.close();
     }
 }

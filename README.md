@@ -1,78 +1,71 @@
-# 🐝 BeeCrowd — Problem 1008: Salary
+# Simple Calculate
+**beecrowd | 1010**
 
-## 📌 Problem Description
+**Timelimit:** 1
 
-Write a program that reads:
+## Problem Description
+In this problem, the task is to read:
+- the code of **product 1**,
+- the number of units of product 1,
+- the price for one unit of product 1,
+- the code of **product 2**,
+- the number of units of product 2,
+- the price for one unit of product 2.
 
-- An employee's **number**
-- The **number of hours worked** in a month
-- The **amount received per hour**
-
-Then, calculate and print the employee’s **salary at the end of the month**, formatted with **two decimal places**.
-
-⚠️ Pay attention to the output format:
-- Print a **line break** after each line
-- Include a **space before and after** the equal sign (`=`)
-- Include a **space after `U$`**
-
----
-
-## 📥 Input
-
-The input file contains:
-- **2 integer values** (employee number and worked hours)
-- **1 floating-point value** (salary per hour)
-
-Each value is provided on a separate line.
+After this, calculate and show the **amount to be paid**.
 
 ---
 
-## 📤 Output
-
-Print:
-- The employee number in the format:
-  NUMBER = X
-
-- The employee salary in the format:
-  SALARY = U$ Y
-
-Where the salary must be displayed with **two decimal places**.
+## Input
+The input file contains **two lines of data**.  
+In each line there will be:
+- two integers, and
+- one floating-point value with **2 digits after the decimal point**.
 
 ---
 
-## 🧪 Examples
+## Output
+The output file must be a message like the following example, where  
+**"VALOR A PAGAR"** means *Value to Pay*.
 
-### Input
-25
-100
-5.50
+⚠️ Remember:
+- There must be a space after `:`
+- There must be a space after the `R$` symbol
+- The value must be presented with **2 digits after the decimal point**
 
+---
 
-### Output
-NUMBER = 25
-SALARY = U$ 550.00
+## Input Samples / Output Samples
+
+### Example 1
+**Input**
+
+12 1 5.30
+16 2 5.10
+
+**Output**
+VALOR A PAGAR: R$ 15.50
 
 
 ---
 
-### Input
-1
-200
-20.50
+### Example 2
+**Input**
+13 2 15.30
+161 4 5.20
 
 
-### Output
-NUMBER = 1
-SALARY = U$ 4100.00
+**Output**
+VALOR A PAGAR: R$ 51.40
 
 
 ---
 
-### Input
-6
-145
-15.55
+### Example 3
+**Input**
+1 1 15.10
+2 1 15.10
 
-### Output
-NUMBER = 6
-SALARY = U$ 2254.75
+
+**Output**
+VALOR A PAGAR: R$ 30.20
