@@ -6,13 +6,13 @@ import java.util.Locale;
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in).useLocale(Locale.US);
-        
-        double R = sc.nextDouble();
-        double PI = 3.14159;
-        double A = PI * R * R;
+        Scanner sc = new Scanner(System.in);
 
+        int A = sc.nextInt();
+        int B = sc.nextInt();
 
-        System.out.printf("A=%.4f%n", A);
+        int SOMA = A + B;
+
+        System.out.println("SOMA = " + SOMA);
     }
 }
