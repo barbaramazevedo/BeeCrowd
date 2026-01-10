@@ -6,13 +6,13 @@ import java.util.Locale;
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in).useLocale(Locale.US);
 
-        int A = sc.nextInt();
-        int B = sc.nextInt();
+        double A = sc.nextDouble();
+        double B = sc.nextDouble();
 
-        int PROD = A * B;
+        double MEDIA = (A * 3.5 + B * 7.5) / 11;
 
-        System.out.println("PROD = " + PROD);
+        System.out.printf("MEDIA = %.5f%n", MEDIA);
     }
 }
