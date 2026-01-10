@@ -1,73 +1,78 @@
-# 🐝 BeeCrowd — Problem 1007: Difference
+# 🐝 BeeCrowd — Problem 1008: Salary
 
 ## 📌 Problem Description
 
-Read four integer values named **A**, **B**, **C**, and **D**.  
-Calculate and print the difference between the product of **A** and **B** and the product of **C** and **D**, according to the formula:
+Write a program that reads:
 
-DIFERENCA = (A × B) − (C × D)
+- An employee's **number**
+- The **number of hours worked** in a month
+- The **amount received per hour**
 
-yaml
-Copiar código
+Then, calculate and print the employee’s **salary at the end of the month**, formatted with **two decimal places**.
+
+⚠️ Pay attention to the output format:
+- Print a **line break** after each line
+- Include a **space before and after** the equal sign (`=`)
+- Include a **space after `U$`**
 
 ---
 
 ## 📥 Input
 
-The input file contains **four integer values**, one per line.
+The input file contains:
+- **2 integer values** (employee number and worked hours)
+- **1 floating-point value** (salary per hour)
+
+Each value is provided on a separate line.
 
 ---
 
 ## 📤 Output
 
-Print the message **`DIFERENCA =`** (DIFFERENCE in Portuguese), using **uppercase letters**, with a blank space before and after the equal sign, followed by the calculated value.
+Print:
+- The employee number in the format:
+  NUMBER = X
+
+- The employee salary in the format:
+  SALARY = U$ Y
+
+Where the salary must be displayed with **two decimal places**.
 
 ---
 
 ## 🧪 Examples
 
 ### Input
-5
-6
-7
-8
+25
+100
+5.50
 
-shell
-Copiar código
 
 ### Output
-DIFERENCA = -26
+NUMBER = 25
+SALARY = U$ 550.00
 
-yaml
-Copiar código
 
 ---
 
 ### Input
-0
-0
-7
-8
+1
+200
+20.50
 
-shell
-Copiar código
 
 ### Output
-DIFERENCA = -56
+NUMBER = 1
+SALARY = U$ 4100.00
 
-yaml
-Copiar código
 
 ---
 
 ### Input
-5
 6
--7
-8
-
-shell
-Copiar código
+145
+15.55
 
 ### Output
-DIFERENCA = 86
+NUMBER = 6
+SALARY = U$ 2254.75

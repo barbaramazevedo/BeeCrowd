@@ -4,15 +4,15 @@ import java.util.Locale;
 
 public class Main {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in).useLocale(Locale.US);
 
-        int A = sc.nextInt();
-        int B = sc.nextInt();
-        int C = sc.nextInt();
-        int D = sc.nextInt();
+        int number = sc.nextInt();
+        int hoursWorked = sc.nextInt();
+        double priceHour = sc.nextDouble();
 
-        int DIFERENCA = (A * B - C * D);
+        double salary = hoursWorked * priceHour;
 
-        System.out.println("DIFERENCA = " + DIFERENCA);
+        System.out.println("NUMBER = " + number);
+        System.out.printf("SALARY = U$ %.2f%n", salary);
     }
 }
