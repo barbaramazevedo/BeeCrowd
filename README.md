@@ -1,42 +1,42 @@
-# 🐝 BeeCrowd — Problem 1006: Average 2
+# 🐝 BeeCrowd — Problem 1007: Difference
 
 ## 📌 Problem Description
 
-Read three values (**A**, **B**, and **C**), which represent a student’s grades.  
-Calculate the student’s average considering the following weights:
+Read four integer values named **A**, **B**, **C**, and **D**.  
+Calculate and print the difference between the product of **A** and **B** and the product of **C** and **D**, according to the formula:
 
-- Grade **A** has weight **2**
-- Grade **B** has weight **3**
-- Grade **C** has weight **5**
+DIFERENCA = (A × B) − (C × D)
 
-Each grade ranges from **0.0 to 10.0**, always with **one decimal place**.
+yaml
+Copiar código
 
 ---
 
 ## 📥 Input
 
-The input file contains **three floating-point values** (**double precision**), each with **one digit after the decimal point**, one per line.
+The input file contains **four integer values**, one per line.
 
 ---
 
 ## 📤 Output
 
-Print the message **`MEDIA =`** (average in Portuguese), with a blank space before and after the equal sign, followed by the student’s average, according to the format shown in the examples below.
+Print the message **`DIFERENCA =`** (DIFFERENCE in Portuguese), using **uppercase letters**, with a blank space before and after the equal sign, followed by the calculated value.
 
 ---
 
 ## 🧪 Examples
 
 ### Input
-5.0
-6.0
-7.0
+5
+6
+7
+8
 
 shell
 Copiar código
 
 ### Output
-MEDIA = 6.3
+DIFERENCA = -26
 
 yaml
 Copiar código
@@ -44,15 +44,16 @@ Copiar código
 ---
 
 ### Input
-5.0
-10.0
-10.0
+0
+0
+7
+8
 
 shell
 Copiar código
 
 ### Output
-MEDIA = 9.0
+DIFERENCA = -56
 
 yaml
 Copiar código
@@ -60,12 +61,13 @@ Copiar código
 ---
 
 ### Input
-10.0
-10.0
-5.0
+5
+6
+-7
+8
 
 shell
 Copiar código
 
 ### Output
-MEDIA = 7.5
+DIFERENCA = 86

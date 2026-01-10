@@ -4,14 +4,16 @@ import java.util.Locale;
 
 public class Main {
     public static void main(String[] args) {
+        Scanner Sc = new Scanner(System.in);
         Scanner sc = new Scanner(System.in).useLocale(Locale.US);
 
-        double A = sc.nextDouble();
-        double B = sc.nextDouble();
-        double C = sc.nextDouble();
+        int A = sc.nextInt();
+        int B = sc.nextInt();
+        int C = sc.nextInt();
+        int D = sc.nextInt();
 
-        double MEDIA = (A * 2 + B * 3 + C * 5) / 10;
+        int DIFERENCA = (A * B - C * D);
 
-        System.out.printf(Locale.US, "MEDIA = %.1f%n", MEDIA);
+        System.out.println("DIFERENCA = " + DIFERENCA);
     }
 }
