@@ -1,71 +1,75 @@
-# Simple Calculate
-**beecrowd | 1010**
+# 🐝 BeeCrowd — Problem 1010: Simple Calculate
 
-**Timelimit:** 1
+## 📌 Problem Description
 
-## Problem Description
-In this problem, the task is to read:
-- the code of **product 1**,
-- the number of units of product 1,
-- the price for one unit of product 1,
-- the code of **product 2**,
-- the number of units of product 2,
-- the price for one unit of product 2.
+In this problem, you must read the information of **two products**, where each product has:
 
-After this, calculate and show the **amount to be paid**.
+- A **product code**
+- The **number of units**
+- The **price per unit**
 
----
+After reading the data, calculate and print the **total amount to be paid**, formatted with **two decimal places**.
 
-## Input
-The input file contains **two lines of data**.  
-In each line there will be:
-- two integers, and
-- one floating-point value with **2 digits after the decimal point**.
+⚠️ Pay attention to the output format:
+
+- Print a **line break** after the result
+- Include **blank spaces exactly as shown**
+- Include a **space after `:`**
+- Include a **space after `R$`**
+- The value must be displayed with **two digits after the decimal point**
 
 ---
 
-## Output
-The output file must be a message like the following example, where  
-**"VALOR A PAGAR"** means *Value to Pay*.
+## 📥 Input
 
-⚠️ Remember:
-- There must be a space after `:`
-- There must be a space after the `R$` symbol
-- The value must be presented with **2 digits after the decimal point**
+The input file contains **two lines**.
+
+Each line contains:
+
+- **2 integer values** (product code and number of units)
+- **1 floating-point value** (price per unit, with two decimal places)
 
 ---
 
-## Input Samples / Output Samples
+## 📤 Output
 
-### Example 1
-**Input**
+Print a message in the following format:
 
-12 1 5.30
+VALOR A PAGAR: R$ X
+
+Where **X** is the total amount to be paid, displayed with **two decimal places**.
+
+---
+
+## 🧪 Examples
+
+### Input
+
+12 1 5.30  
 16 2 5.10
 
-**Output**
+### Output
+
 VALOR A PAGAR: R$ 15.50
 
-
 ---
 
-### Example 2
-**Input**
-13 2 15.30
+### Input
+
+13 2 15.30  
 161 4 5.20
 
+### Output
 
-**Output**
 VALOR A PAGAR: R$ 51.40
-
 
 ---
 
-### Example 3
-**Input**
-1 1 15.10
+### Input
+
+1 1 15.10  
 2 1 15.10
 
+### Output
 
-**Output**
 VALOR A PAGAR: R$ 30.20
