@@ -4,20 +4,14 @@ import java.util.Locale;
 
 public class Main {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in).useLocale(Locale.US);
+        Scanner sc = new Scanner(System.in);
 
-        int codeProduct1 = sc.nextInt();
-        int unitsProduct1 = sc.nextInt();
-        double priceProduct1 = sc.nextDouble();
-
-        int codeProduct2 = sc.nextInt();
-        int unitsProduct2 = sc.nextInt();
-        double priceProduct2 = sc.nextDouble();
-
-        double amount = unitsProduct1 * priceProduct1 + unitsProduct2 * priceProduct2;
-
-        System.out.printf(Locale.US, "VALOR A PAGAR: R$ %.2f%n", amount);
-
+        double R = sc.nextDouble();
+        final double PI = 3.14159;
+        double volume = (4.0/3.0) * PI * R * R * R;
+       
+        System.out.printf(Locale.US, "VOLUME = %.3f%n", volume);
+        
         sc.close();
     }
 }

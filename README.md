@@ -1,33 +1,32 @@
-# 🐝 BeeCrowd — Problem 1010: Simple Calculate
+# 🐝 BeeCrowd — Problem 1011: Sphere
 
 ## 📌 Problem Description
 
-In this problem, you must read the information of **two products**, where each product has:
+Make a program that calculates and prints the **volume of a sphere**, given the value of its **radius (R)**.
 
-- A **product code**
-- The **number of units**
-- The **price per unit**
+The formula to calculate the volume is:
 
-After reading the data, calculate and print the **total amount to be paid**, formatted with **two decimal places**.
+\[
+\text{Volume} = \frac{4}{3} \times \pi \times R^3
+\]
+
+Consider the value of **π = 3.14159**.
+
+💡 Tip: Use `(4 / 3.0)` or `(4.0 / 3)` in your formula to avoid integer division issues in some programming languages.
 
 ⚠️ Pay attention to the output format:
 
+- Include a **space before and after** the equal sign (`=`)
 - Print a **line break** after the result
-- Include **blank spaces exactly as shown**
-- Include a **space after `:`**
-- Include a **space after `R$`**
-- The value must be displayed with **two digits after the decimal point**
+- The value must be displayed with **three decimal places**
 
 ---
 
 ## 📥 Input
 
-The input file contains **two lines**.
+The input contains:
 
-Each line contains:
-
-- **2 integer values** (product code and number of units)
-- **1 floating-point value** (price per unit, with two decimal places)
+- **1 floating-point value** (double precision), representing the radius of the sphere
 
 ---
 
@@ -35,9 +34,9 @@ Each line contains:
 
 Print a message in the following format:
 
-VALOR A PAGAR: R$ X
+VOLUME = X
 
-Where **X** is the total amount to be paid, displayed with **two decimal places**.
+Where **X** is the calculated volume, displayed with **three decimal places**.
 
 ---
 
@@ -45,31 +44,28 @@ Where **X** is the total amount to be paid, displayed with **two decimal places*
 
 ### Input
 
-12 1 5.30  
-16 2 5.10
+3
 
 ### Output
 
-VALOR A PAGAR: R$ 15.50
+VOLUME = 113.097
 
 ---
 
 ### Input
 
-13 2 15.30  
-161 4 5.20
+15
 
 ### Output
 
-VALOR A PAGAR: R$ 51.40
+VOLUME = 14137.155
 
 ---
 
 ### Input
 
-1 1 15.10  
-2 1 15.10
+1523
 
 ### Output
 
-VALOR A PAGAR: R$ 30.20
+VOLUME = 14797486501.627
