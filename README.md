@@ -1,27 +1,32 @@
-# 🐝 BeeCrowd — Problem 1008: Salary
+# 🐝 BeeCrowd — Problem 1009: Salary with Bonus
 
 ## 📌 Problem Description
 
-Write a program that reads:
+Make a program that reads:
 
-- An employee's **number**
-- The **number of hours worked** in a month
-- The **amount received per hour**
+- A seller's **name**
+- The seller's **fixed salary**
+- The **total amount sold** by the seller in the month
 
-Then, calculate and print the employee’s **salary at the end of the month**, formatted with **two decimal places**.
+Considering that the seller receives a **15% commission** over the total sales, calculate and print the seller’s **final salary** at the end of the month, formatted with **two decimal places**.
 
 ⚠️ Pay attention to the output format:
-- Print a **line break** after each line
+
+- Print a **line break** after the result
+- Include **blank spaces exactly as shown**
 - Include a **space before and after** the equal sign (`=`)
-- Include a **space after `U$`**
+- Include a **space after `R$`**
 
 ---
 
 ## 📥 Input
 
 The input file contains:
-- **2 integer values** (employee number and worked hours)
-- **1 floating-point value** (salary per hour)
+
+- **1 text value** (seller's first name)
+- **2 double precision values**:
+  - Fixed salary
+  - Total value sold in the month
 
 Each value is provided on a separate line.
 
@@ -29,12 +34,9 @@ Each value is provided on a separate line.
 
 ## 📤 Output
 
-Print:
-- The employee number in the format:
-  NUMBER = X
+Print the seller’s **total salary** (fixed salary + 15% commission) in the format:
 
-- The employee salary in the format:
-  SALARY = U$ Y
+TOTAL = R$ X
 
 Where the salary must be displayed with **two decimal places**.
 
@@ -43,36 +45,35 @@ Where the salary must be displayed with **two decimal places**.
 ## 🧪 Examples
 
 ### Input
-25
-100
-5.50
 
+JOAO  
+500.00  
+1230.30
 
 ### Output
-NUMBER = 25
-SALARY = U$ 550.00
 
+TOTAL = R$ 684.54
 
 ---
 
 ### Input
-1
-200
-20.50
 
+PEDRO  
+700.00  
+0.00
 
 ### Output
-NUMBER = 1
-SALARY = U$ 4100.00
 
+TOTAL = R$ 700.00
 
 ---
 
 ### Input
-6
-145
-15.55
+
+MANGOJATA  
+1700.00  
+1230.50
 
 ### Output
-NUMBER = 6
-SALARY = U$ 2254.75
+
+TOTAL = R$ 1884.58
