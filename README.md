@@ -1,42 +1,46 @@
-# 🐝 BeeCrowd — Problem 1011: Sphere
+# 🐝 BeeCrowd — Problem 1012: Area
 
 ## 📌 Problem Description
 
-Make a program that calculates and prints the **volume of a sphere**, given the value of its **radius (R)**.
+Make a program that reads **three floating-point values**: **A**, **B**, and **C**.  
+Then, calculate and display the following areas:
 
-The formula to calculate the volume is:
-
-\[
-\text{Volume} = \frac{4}{3} \times \pi \times R^3
-\]
-
-Consider the value of **π = 3.14159**.
-
-💡 Tip: Use `(4 / 3.0)` or `(4.0 / 3)` in your formula to avoid integer division issues in some programming languages.
+a) The area of a **right triangle** with base **A** and height **C**  
+b) The area of a **circle** with radius **C** (use π = 3.14159)  
+c) The area of a **trapezium** with bases **A** and **B**, and height **C**  
+d) The area of a **square** with side **B**  
+e) The area of a **rectangle** with sides **A** and **B**
 
 ⚠️ Pay attention to the output format:
 
-- Include a **space before and after** the equal sign (`=`)
-- Print a **line break** after the result
-- The value must be displayed with **three decimal places**
+- Print **exactly 5 lines**
+- Each line must contain the corresponding **Portuguese label**
+- Include **one space after the colon (`:`)**
+- Print a **line break** after each line
+- The values must be displayed with **three decimal places**
 
 ---
 
 ## 📥 Input
 
-The input contains:
+The input file contains:
 
-- **1 floating-point value** (double precision), representing the radius of the sphere
+- **3 double-precision values** (**A**, **B**, and **C**), provided on the same line
+- Each value has **one digit after the decimal point**
 
 ---
 
 ## 📤 Output
 
-Print a message in the following format:
+The output must contain **five lines**, each one showing the calculated area in the following format:
 
-VOLUME = X
+TRIANGULO: X  
+CIRCULO: X  
+TRAPEZIO: X  
+QUADRADO: X  
+RETANGULO: X
 
-Where **X** is the calculated volume, displayed with **three decimal places**.
+Where each **X** is the corresponding area, displayed with **three decimal places**.
 
 ---
 
@@ -44,28 +48,26 @@ Where **X** is the calculated volume, displayed with **three decimal places**.
 
 ### Input
 
-3
+3.0 4.0 5.2
 
 ### Output
 
-VOLUME = 113.097
+TRIANGULO: 7.800  
+CIRCULO: 84.949  
+TRAPEZIO: 18.200  
+QUADRADO: 16.000  
+RETANGULO: 12.000
 
 ---
 
 ### Input
 
-15
+12.7 10.4 15.2
 
 ### Output
 
-VOLUME = 14137.155
-
----
-
-### Input
-
-1523
-
-### Output
-
-VOLUME = 14797486501.627
+TRIANGULO: 96.520  
+CIRCULO: 725.833  
+TRAPEZIO: 175.560  
+QUADRADO: 108.160  
+RETANGULO: 132.080
