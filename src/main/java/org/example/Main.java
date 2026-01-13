@@ -6,14 +6,14 @@ public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in).useLocale(Locale.US);
 
-        int X = sc.nextInt();
-        double Y = sc.nextDouble();
-        double average = (double) X/Y;
+        double x1 = sc.nextDouble();
+        double y1 = sc.nextDouble();
+        double x2 = sc.nextDouble();
+        double y2 = sc.nextDouble();
 
-//        int maiorAB = (a + b + Math.abs(a - b)) / 2;
-//        int maiorABC = (maiorAB + c + Math.abs(maiorAB - c)) /2;
+        double distanceBetween = Math.sqrt(Math.pow((x2 -x1), 2) + Math.pow((y2 - y1), 2));
 
-        System.out.printf(Locale.US, "%.3f km/l%n", average);
+        System.out.printf(Locale.US, "%.4f%n", distanceBetween);
 
         sc.close();
     }

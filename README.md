@@ -1,65 +1,62 @@
-# 🐝 BeeCrowd — Problem 1014: Consumption
+# 🐝 BeeCrowd — Problem 1015: Distance Between Two Points
 
 ## 📌 Problem Description
 
-Calculate a car’s **average fuel consumption** given:
+Read the coordinates of **two points in a Cartesian plane**,  
+**p1 (x1, y1)** and **p2 (x2, y2)**, and calculate the **distance between them**.
 
-- The **total distance traveled** (in kilometers)
-- The **total fuel spent** (in liters)
+The distance must be calculated using the following formula:
 
-The average consumption is calculated by dividing the distance traveled by the amount of fuel spent.
+\[
+\text{Distance} = \sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2}
+\]
 
 ⚠️ Pay attention to the output format:
-- The result must be displayed with **three decimal places**
-- Include a **space before the unit**
-- The output must be followed by the message **"km/l"**
+- The result must be displayed with **four decimal places**
 - Print a **line break** after the result
+- Do **not** print any additional text
 
 ---
 
 ## 📥 Input
 
-The input file contains:
-- **1 integer value** `X` — total distance traveled (in km)
-- **1 floating-point value** `Y` — total fuel spent (in liters), with one digit after the decimal point
+The input file contains **two lines**:
+- The first line contains two **double values**: `x1 y1`
+- The second line contains two **double values**: `x2 y2`
 
-Each value is provided on a separate line.
+Each value has **one digit after the decimal point**.
 
 ---
 
 ## 📤 Output
 
-Print the average fuel consumption in the following format:
-
-X km/l
-
-Where **X** is the calculated average consumption, displayed with **three decimal places**.
+Print the distance between the two points, calculated using the given formula, with **four decimal places**.
 
 ---
 
 ## 🧪 Examples
 
 ### Input
-500  
-35.0
+1.0 7.0  
+5.0 9.0
 
 ### Output
-14.286 km/l
+4.4721
 
 ---
 
 ### Input
-2254  
-124.4
+-2.5 0.4  
+12.1 7.3
 
 ### Output
-18.119 km/l
+16.1484
 
 ---
 
 ### Input
-4554  
-464.6
+2.5 -0.4  
+-12.2 7.0
 
 ### Output
-9.802 km/l  
+16.4575  
