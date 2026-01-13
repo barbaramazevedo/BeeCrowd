@@ -6,11 +6,16 @@ public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in).useLocale(Locale.US);
 
-        int km = sc.nextInt();
 
-        int minutes = km * 2;
+        int hours = sc.nextInt();
+        int averageSpeed = sc.nextInt();
 
-        System.out.println(minutes +" minutos");
+        int distance = hours * averageSpeed;
+        int performance = 12;
+
+        double efficiency = (double) distance * 1 / performance;
+
+        System.out.printf(Locale.US, "%.3f%n", efficiency);
 
         sc.close();
     }

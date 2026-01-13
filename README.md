@@ -1,21 +1,19 @@
-# 🐝 BeeCrowd — Problem 1016: Distance
+# 🐝 BeeCrowd — Problem 1017: Fuel Spent
 
 ## 📌 Problem Description
 
-Two cars, **X** and **Y**, travel in the same direction:
+Little John wants to calculate the **amount of fuel spent** during a trip using a car that runs **12 km per liter**.
 
-- Car **X** moves at a constant speed of **60 km/h**
-- Car **Y** moves at a constant speed of **90 km/h**
+To do this, you must read:
+- The **time spent** on the trip (in hours)
+- The **average speed** during the trip (in km/h)
 
-In **1 hour (60 minutes)**, car **Y** increases its distance from car **X** by **30 km**.  
-This means that car **Y** gets **1 km farther every 2 minutes**.
-
-Given a distance (in kilometers), calculate how long it takes (in **minutes**) for car **Y** to obtain this distance relative to car **X**.
+First, calculate the **distance traveled** by multiplying time and speed.  
+Then, calculate the **fuel consumption** by dividing the distance by **12**.
 
 ⚠️ Pay attention to the output format:
-- Print the result on **a single line**
-- Include **one space** between the number and the word
-- The output must be followed by the message **"minutos"**
+- The result must be displayed with **three decimal places**
+- Do **not** print any additional text
 - Print a **line break** after the result
 
 ---
@@ -23,38 +21,43 @@ Given a distance (in kilometers), calculate how long it takes (in **minutes**) f
 ## 📥 Input
 
 The input file contains:
-- **1 integer value**, representing the distance (in km)
+- **2 integer values**:
+    - The first represents the **time spent** on the trip (in hours)
+    - The second represents the **average speed** (in km/h)
+
+Each value is provided on a separate line.
 
 ---
 
 ## 📤 Output
 
-Print the required time (in minutes) followed by the message:
-
-minutos
+Print the amount of fuel needed (in liters), displayed with **three decimal places**.
 
 ---
 
 ## 🧪 Examples
 
 ### Input
-30
+10  
+85
 
 ### Output
-60 minutos
+70.833
 
 ---
 
 ### Input
-110
+2  
+92
 
 ### Output
-220 minutos
+15.333
 
 ---
 
 ### Input
-7
+22  
+67
 
 ### Output
-14 minutos  
+122.833  
