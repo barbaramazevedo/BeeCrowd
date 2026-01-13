@@ -1,73 +1,53 @@
-# 🐝 BeeCrowd — Problem 1012: Area
+# 🐝 BeeCrowd — Problem 1013: The Greatest
 
 ## 📌 Problem Description
 
-Make a program that reads **three floating-point values**: **A**, **B**, and **C**.  
-Then, calculate and display the following areas:
+Make a program that reads **three integer values** and determines the **greatest** among them.
 
-a) The area of a **right triangle** with base **A** and height **C**  
-b) The area of a **circle** with radius **C** (use π = 3.14159)  
-c) The area of a **trapezium** with bases **A** and **B**, and height **C**  
-d) The area of a **square** with side **B**  
-e) The area of a **rectangle** with sides **A** and **B**
+After identifying the greatest value, print it followed by the message **"eh o maior"**.
+
+To solve this problem, use the following formula to find the greatest value between two numbers:
+
+\[
+\text{maior}(a, b) = \frac{a + b + |a - b|}{2}
+\]
+
+You can apply this formula multiple times to compare the three values.
 
 ⚠️ Pay attention to the output format:
-
-- Print **exactly 5 lines**
-- Each line must contain the corresponding **Portuguese label**
-- Include **one space after the colon (`:`)**
-- Print a **line break** after each line
-- The values must be displayed with **three decimal places**
+- Print the result on **a single line**
+- Include **one space** between the number and the message
+- Print a **line break** after the output
 
 ---
 
 ## 📥 Input
 
 The input file contains:
-
-- **3 double-precision values** (**A**, **B**, and **C**), provided on the same line
-- Each value has **one digit after the decimal point**
+- **3 integer values**, provided on the same line
 
 ---
 
 ## 📤 Output
 
-The output must contain **five lines**, each one showing the calculated area in the following format:
+Print the greatest of the three values followed by a space and the message:
 
-TRIANGULO: X  
-CIRCULO: X  
-TRAPEZIO: X  
-QUADRADO: X  
-RETANGULO: X
-
-Where each **X** is the corresponding area, displayed with **three decimal places**.
+eh o maior
 
 ---
 
 ## 🧪 Examples
 
 ### Input
-
-3.0 4.0 5.2
+7 14 106
 
 ### Output
-
-TRIANGULO: 7.800  
-CIRCULO: 84.949  
-TRAPEZIO: 18.200  
-QUADRADO: 16.000  
-RETANGULO: 12.000
+106 eh o maior
 
 ---
 
 ### Input
-
-12.7 10.4 15.2
+217 14 6
 
 ### Output
-
-TRIANGULO: 96.520  
-CIRCULO: 725.833  
-TRAPEZIO: 175.560  
-QUADRADO: 108.160  
-RETANGULO: 132.080
+217 eh o maior  
