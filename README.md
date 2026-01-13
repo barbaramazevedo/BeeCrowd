@@ -1,53 +1,65 @@
-# 🐝 BeeCrowd — Problem 1013: The Greatest
+# 🐝 BeeCrowd — Problem 1014: Consumption
 
 ## 📌 Problem Description
 
-Make a program that reads **three integer values** and determines the **greatest** among them.
+Calculate a car’s **average fuel consumption** given:
 
-After identifying the greatest value, print it followed by the message **"eh o maior"**.
+- The **total distance traveled** (in kilometers)
+- The **total fuel spent** (in liters)
 
-To solve this problem, use the following formula to find the greatest value between two numbers:
-
-\[
-\text{maior}(a, b) = \frac{a + b + |a - b|}{2}
-\]
-
-You can apply this formula multiple times to compare the three values.
+The average consumption is calculated by dividing the distance traveled by the amount of fuel spent.
 
 ⚠️ Pay attention to the output format:
-- Print the result on **a single line**
-- Include **one space** between the number and the message
-- Print a **line break** after the output
+- The result must be displayed with **three decimal places**
+- Include a **space before the unit**
+- The output must be followed by the message **"km/l"**
+- Print a **line break** after the result
 
 ---
 
 ## 📥 Input
 
 The input file contains:
-- **3 integer values**, provided on the same line
+- **1 integer value** `X` — total distance traveled (in km)
+- **1 floating-point value** `Y` — total fuel spent (in liters), with one digit after the decimal point
+
+Each value is provided on a separate line.
 
 ---
 
 ## 📤 Output
 
-Print the greatest of the three values followed by a space and the message:
+Print the average fuel consumption in the following format:
 
-eh o maior
+X km/l
+
+Where **X** is the calculated average consumption, displayed with **three decimal places**.
 
 ---
 
 ## 🧪 Examples
 
 ### Input
-7 14 106
+500  
+35.0
 
 ### Output
-106 eh o maior
+14.286 km/l
 
 ---
 
 ### Input
-217 14 6
+2254  
+124.4
 
 ### Output
-217 eh o maior  
+18.119 km/l
+
+---
+
+### Input
+4554  
+464.6
+
+### Output
+9.802 km/l  
