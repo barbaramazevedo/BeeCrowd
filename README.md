@@ -1,63 +1,96 @@
-# 🐝 BeeCrowd — Problem 1017: Fuel Spent
+# 🐝 BeeCrowd — Problem 1018: Banknotes
 
 ## 📌 Problem Description
 
-Little John wants to calculate the **amount of fuel spent** during a trip using a car that runs **12 km per liter**.
+In this problem, you must read an **integer value** and decompose it into the **smallest possible number of banknotes**.
 
-To do this, you must read:
-- The **time spent** on the trip (in hours)
-- The **average speed** during the trip (in km/h)
+The available banknotes are:
 
-First, calculate the **distance traveled** by multiplying time and speed.  
-Then, calculate the **fuel consumption** by dividing the distance by **12**.
+- R$ 100,00
+- R$ 50,00
+- R$ 20,00
+- R$ 10,00
+- R$ 5,00
+- R$ 2,00
+- R$ 1,00
+
+The original value and the quantity of each banknote used must be printed exactly as shown in the example.
 
 ⚠️ Pay attention to the output format:
-- The result must be displayed with **three decimal places**
-- Do **not** print any additional text
-- Print a **line break** after the result
+- Print the **original value** on the first line
+- Print **one line for each banknote value**, in descending order
+- Use the **Portuguese message exactly as specified**
+- Print a **line break** after each line
 
 ---
 
 ## 📥 Input
 
 The input file contains:
-- **2 integer values**:
-    - The first represents the **time spent** on the trip (in hours)
-    - The second represents the **average speed** (in km/h)
-
-Each value is provided on a separate line.
+- **1 integer value** `N` `(0 < N < 1,000,000)`
 
 ---
 
 ## 📤 Output
 
-Print the amount of fuel needed (in liters), displayed with **three decimal places**.
+Print:
+- The input value
+- The minimum quantity of each banknote required to compose the value
+
+The output must follow **exactly** this format:
+
+X  
+A nota(s) de R$ 100,00  
+B nota(s) de R$ 50,00  
+C nota(s) de R$ 20,00  
+D nota(s) de R$ 10,00  
+E nota(s) de R$ 5,00  
+F nota(s) de R$ 2,00  
+G nota(s) de R$ 1,00
 
 ---
 
 ## 🧪 Examples
 
 ### Input
-10  
-85
+576
 
 ### Output
-70.833
+576  
+5 nota(s) de R$ 100,00  
+1 nota(s) de R$ 50,00  
+1 nota(s) de R$ 20,00  
+0 nota(s) de R$ 10,00  
+1 nota(s) de R$ 5,00  
+0 nota(s) de R$ 2,00  
+1 nota(s) de R$ 1,00
 
 ---
 
 ### Input
-2  
-92
+11257
 
 ### Output
-15.333
+11257  
+112 nota(s) de R$ 100,00  
+1 nota(s) de R$ 50,00  
+0 nota(s) de R$ 20,00  
+0 nota(s) de R$ 10,00  
+1 nota(s) de R$ 5,00  
+1 nota(s) de R$ 2,00  
+0 nota(s) de R$ 1,00
 
 ---
 
 ### Input
-22  
-67
+503
 
 ### Output
-122.833  
+503  
+5 nota(s) de R$ 100,00  
+0 nota(s) de R$ 50,00  
+0 nota(s) de R$ 20,00  
+0 nota(s) de R$ 10,00  
+0 nota(s) de R$ 5,00  
+1 nota(s) de R$ 2,00  
+1 nota(s) de R$ 1,00  
