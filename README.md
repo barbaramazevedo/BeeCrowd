@@ -1,18 +1,21 @@
-# 🐝 BeeCrowd — Problem 1014: Consumption
+# 🐝 BeeCrowd — Problem 1016: Distance
 
 ## 📌 Problem Description
 
-Calculate a car’s **average fuel consumption** given:
+Two cars, **X** and **Y**, travel in the same direction:
 
-- The **total distance traveled** (in kilometers)
-- The **total fuel spent** (in liters)
+- Car **X** moves at a constant speed of **60 km/h**
+- Car **Y** moves at a constant speed of **90 km/h**
 
-The average consumption is calculated by dividing the distance traveled by the amount of fuel spent.
+In **1 hour (60 minutes)**, car **Y** increases its distance from car **X** by **30 km**.  
+This means that car **Y** gets **1 km farther every 2 minutes**.
+
+Given a distance (in kilometers), calculate how long it takes (in **minutes**) for car **Y** to obtain this distance relative to car **X**.
 
 ⚠️ Pay attention to the output format:
-- The result must be displayed with **three decimal places**
-- Include a **space before the unit**
-- The output must be followed by the message **"km/l"**
+- Print the result on **a single line**
+- Include **one space** between the number and the word
+- The output must be followed by the message **"minutos"**
 - Print a **line break** after the result
 
 ---
@@ -20,46 +23,38 @@ The average consumption is calculated by dividing the distance traveled by the a
 ## 📥 Input
 
 The input file contains:
-- **1 integer value** `X` — total distance traveled (in km)
-- **1 floating-point value** `Y` — total fuel spent (in liters), with one digit after the decimal point
-
-Each value is provided on a separate line.
+- **1 integer value**, representing the distance (in km)
 
 ---
 
 ## 📤 Output
 
-Print the average fuel consumption in the following format:
+Print the required time (in minutes) followed by the message:
 
-X km/l
-
-Where **X** is the calculated average consumption, displayed with **three decimal places**.
+minutos
 
 ---
 
 ## 🧪 Examples
 
 ### Input
-500  
-35.0
+30
 
 ### Output
-14.286 km/l
+60 minutos
 
 ---
 
 ### Input
-2254  
-124.4
+110
 
 ### Output
-18.119 km/l
+220 minutos
 
 ---
 
 ### Input
-4554  
-464.6
+7
 
 ### Output
-9.802 km/l  
+14 minutos  

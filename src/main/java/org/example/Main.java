@@ -6,11 +6,11 @@ public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in).useLocale(Locale.US);
 
-        int X = sc.nextInt();
-        double Y = sc.nextDouble();
-        double average = (double) X/Y;
+        int km = sc.nextInt();
 
-        System.out.printf(Locale.US, "%.3f km/l%n", average);
+        int minutes = km * 2;
+
+        System.out.println(minutes +" minutos");
 
         sc.close();
     }
