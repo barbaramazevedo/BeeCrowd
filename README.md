@@ -1,57 +1,70 @@
-# 🐝 BeeCrowd — Problem 1019: Time Conversion
+# 🐝 BeeCrowd — Problem 1020: Age in Days
 
 ## 📌 Problem Description
 
-Read an **integer value** representing the duration of an event in **seconds** and convert it to the format:
+Read an **integer value** representing a person’s age in **days** and convert it into:
 
-**hours:minutes:seconds**
+- **Years**
+- **Months**
+- **Days**
 
-The conversion must correctly calculate:
-- The number of **hours**
-- The remaining **minutes**
-- The remaining **seconds**
+To simplify the calculation, consider:
+- **1 year = 365 days**
+- **1 month = 30 days**
+
+⚠️ Important notes:
+- The test cases will **never** include situations that result in **12 months and some days**
+- This problem focuses on **basic mathematical reasoning**
 
 ⚠️ Pay attention to the output format:
-- Print the result in the format `H:M:S`
-- Do **not** add leading zeros
-- Print a **line break** after the output
-- Do **not** print any additional text
+- Print **three lines**
+- Each line must contain the value followed by its respective message:
+    - `ano(s)`
+    - `mes(es)`
+    - `dia(s)`
+- Print a **line break** after each line
 
 ---
 
 ## 📥 Input
 
 The input file contains:
-- **1 integer value** `N`, representing the duration in seconds
+- **1 integer value**, representing the age in days
 
 ---
 
 ## 📤 Output
 
-Print the given time converted to **hours:minutes:seconds**, exactly as shown in the examples.
+Print the age converted into years, months, and days, exactly as shown in the examples.
 
 ---
 
 ## 🧪 Examples
 
 ### Input
-556
+400
 
 ### Output
-0:9:16
+1 ano(s)  
+1 mes(es)  
+5 dia(s)
 
 ---
 
 ### Input
-1
+800
 
 ### Output
-0:0:1
+2 ano(s)  
+2 mes(es)  
+10 dia(s)
 
 ---
 
 ### Input
-140153
+30
 
 ### Output
-38:55:53  
+0 ano(s)  
+1 mes(es)  
+0 dia(s)  
