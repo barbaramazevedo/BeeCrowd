@@ -1,70 +1,128 @@
-# 🐝 BeeCrowd — Problem 1020: Age in Days
+# 🐝 BeeCrowd — Problem 1021: Banknotes and Coins
 
 ## 📌 Problem Description
 
-Read an **integer value** representing a person’s age in **days** and convert it into:
+Read a **floating-point value** representing a monetary amount and decompose it into the **smallest possible number of banknotes and coins**.
 
-- **Years**
-- **Months**
-- **Days**
+The available denominations are:
 
-To simplify the calculation, consider:
-- **1 year = 365 days**
-- **1 month = 30 days**
+### Banknotes
+- R$ 100.00
+- R$ 50.00
+- R$ 20.00
+- R$ 10.00
+- R$ 5.00
+- R$ 2.00
 
-⚠️ Important notes:
-- The test cases will **never** include situations that result in **12 months and some days**
-- This problem focuses on **basic mathematical reasoning**
+### Coins
+- R$ 1.00
+- R$ 0.50
+- R$ 0.25
+- R$ 0.10
+- R$ 0.05
+- R$ 0.01
 
 ⚠️ Pay attention to the output format:
-- Print **three lines**
-- Each line must contain the value followed by its respective message:
-    - `ano(s)`
-    - `mes(es)`
-    - `dia(s)`
+- Print the title **`NOTAS:`** before listing the banknotes
+- Print the title **`MOEDAS:`** before listing the coins
+- Print the values in the **exact order** shown
 - Print a **line break** after each line
+- Follow the **Portuguese format exactly** as in the examples
 
 ---
 
 ## 📥 Input
 
 The input file contains:
-- **1 integer value**, representing the age in days
+- **1 floating-point value** `N` `(0 ≤ N ≤ 1,000,000.00)`
+- The value has **two decimal places**
 
 ---
 
 ## 📤 Output
 
-Print the age converted into years, months, and days, exactly as shown in the examples.
+Print:
+- The minimum quantity of each **banknote**
+- Followed by the minimum quantity of each **coin**
+
+The output must follow **exactly** this structure:
+
+NOTAS:  
+A nota(s) de R$ 100.00  
+B nota(s) de R$ 50.00  
+C nota(s) de R$ 20.00  
+D nota(s) de R$ 10.00  
+E nota(s) de R$ 5.00  
+F nota(s) de R$ 2.00  
+MOEDAS:  
+G moeda(s) de R$ 1.00  
+H moeda(s) de R$ 0.50  
+I moeda(s) de R$ 0.25  
+J moeda(s) de R$ 0.10  
+K moeda(s) de R$ 0.05  
+L moeda(s) de R$ 0.01
 
 ---
 
 ## 🧪 Examples
 
 ### Input
-400
+576.73
 
 ### Output
-1 ano(s)  
-1 mes(es)  
-5 dia(s)
+NOTAS:  
+5 nota(s) de R$ 100.00  
+1 nota(s) de R$ 50.00  
+1 nota(s) de R$ 20.00  
+0 nota(s) de R$ 10.00  
+1 nota(s) de R$ 5.00  
+0 nota(s) de R$ 2.00  
+MOEDAS:  
+1 moeda(s) de R$ 1.00  
+1 moeda(s) de R$ 0.50  
+0 moeda(s) de R$ 0.25  
+2 moeda(s) de R$ 0.10  
+0 moeda(s) de R$ 0.05  
+3 moeda(s) de R$ 0.01
 
 ---
 
 ### Input
-800
+4.00
 
 ### Output
-2 ano(s)  
-2 mes(es)  
-10 dia(s)
+NOTAS:  
+0 nota(s) de R$ 100.00  
+0 nota(s) de R$ 50.00  
+0 nota(s) de R$ 20.00  
+0 nota(s) de R$ 10.00  
+0 nota(s) de R$ 5.00  
+2 nota(s) de R$ 2.00  
+MOEDAS:  
+0 moeda(s) de R$ 1.00  
+0 moeda(s) de R$ 0.50  
+0 moeda(s) de R$ 0.25  
+0 moeda(s) de R$ 0.10  
+0 moeda(s) de R$ 0.05  
+0 moeda(s) de R$ 0.01
 
 ---
 
 ### Input
-30
+91.01
 
 ### Output
-0 ano(s)  
-1 mes(es)  
-0 dia(s)  
+NOTAS:  
+0 nota(s) de R$ 100.00  
+1 nota(s) de R$ 50.00  
+2 nota(s) de R$ 20.00  
+0 nota(s) de R$ 10.00  
+0 nota(s) de R$ 5.00  
+0 nota(s) de R$ 2.00  
+MOEDAS:  
+1 moeda(s) de R$ 1.00  
+0 moeda(s) de R$ 0.50  
+0 moeda(s) de R$ 0.25  
+0 moeda(s) de R$ 0.10  
+0 moeda(s) de R$ 0.05  
+1 moeda(s) de R$ 0.01  
