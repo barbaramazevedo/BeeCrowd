@@ -6,59 +6,57 @@ public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in).useLocale(Locale.US);
 
-        double value = sc.nextDouble();
-        int convertToCents = (int) Math.round(value *100);
 
-        int bill100 = convertToCents / 10000;
-        int rest100 = convertToCents % 10000;
+        int quantity = sc.nextInt();
 
-        int bill50 = rest100 / 5000;
-        int rest50 = rest100 % 5000;
+        for (int i = 0; i < quantity; i++) {
 
-        int bill20 = rest50 / 2000;
-        int rest20 = rest50 % 2000;
 
-        int bill10 = rest20 / 1000;
-        int rest10 = rest20 % 1000;
+            int N1 = sc.nextInt();
+            sc.next();
+            int D1 = sc.nextInt();
 
-        int bill5 = rest10 / 500;
-        int rest5 = rest10 % 500;
+            String OP = sc.next();
 
-        int bill2 = rest5 / 200;
-        int rest2 = rest5 % 200;
+            int N2 = sc.nextInt();
+            sc.next();
+            int D2 = sc.nextInt();
 
-        int coin1 = rest2 / 100;
-        int restCoin1 = rest2 % 100;
+            int num = 0;
+            int den = 0;
 
-        int coin50 = restCoin1 / 50;
-        int restCoin50 = restCoin1 % 50;
+            if (OP.equals("+")) {
+                num=  (N1*D2 + N2*D1);
+                den= (D1*D2);
+            } else if (OP.equals("-")) {
+                num=  (N1*D2 - N2*D1);
+                den= (D1*D2);
+            } else if (OP.equals("*")) {
+                num = (N1 * N2);
+                den = (D1 * D2);
+            } else if (OP.equals("/")) {
+                num = (N1 * D2);
+                den = (N2 * D1);
+            }
+            int divisor = mdc(num, den);
 
-        int coin25 = restCoin50 / 25;
-        int restCoin25 = restCoin50 % 25;
+            int simpNum = num / divisor;
+            int simpDen = den / divisor;
 
-        int coin10 = restCoin25 / 10;
-        int restCoin10 = restCoin25 % 10;
-
-        int coin5 = restCoin10 / 5;
-
-        int coin01 = restCoin10 % 5;
-
-        System.out.println("NOTAS:");
-        System.out.println(bill100 + " nota(s) de R$ 100.00");
-        System.out.println(bill50 + " nota(s) de R$ 50.00");
-        System.out.println(bill20 + " nota(s) de R$ 20.00");
-        System.out.println(bill10 + " nota(s) de R$ 10.00");
-        System.out.println(bill5 + " nota(s) de R$ 5.00");
-        System.out.println(bill2 + " nota(s) de R$ 2.00");
-
-        System.out.println("MOEDAS:");
-        System.out.println(coin1 + " moeda(s) de R$ 1.00");
-        System.out.println(coin50 + " moeda(s) de R$ 0.50");
-        System.out.println(coin25 + " moeda(s) de R$ 0.25");
-        System.out.println(coin10 + " moeda(s) de R$ 0.10");
-        System.out.println(coin5 + " moeda(s) de R$ 0.05");
-        System.out.println(coin01 + " moeda(s) de R$ 0.01");
-
+            System.out.println(num + "/" + den + " = " + simpNum + "/" + simpDen);
+        }
         sc.close();
+    }
+
+    static int mdc(int a, int b) {
+        a = Math.abs(a);
+        b = Math.abs(b);
+
+        while (b != 0) {
+            int temp = a % b;
+            a = b;
+            b = temp;
+        }
+        return a;
     }
 }

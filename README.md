@@ -1,128 +1,99 @@
-# 🐝 BeeCrowd — Problem 1021: Banknotes and Coins
+# 🐝 BeeCrowd — Problem 1022: TDA Rational
 
 ## 📌 Problem Description
 
-Read a **floating-point value** representing a monetary amount and decompose it into the **smallest possible number of banknotes and coins**.
+You are asked to read and evaluate **mathematical expressions involving rational numbers** (fractions).  
+Each expression contains **two rational values** and **one arithmetic operation**, all separated by blank spaces.
 
-The available denominations are:
+Each rational number is given in the format:
 
-### Banknotes
-- R$ 100.00
-- R$ 50.00
-- R$ 20.00
-- R$ 10.00
-- R$ 5.00
-- R$ 2.00
+numerator / denominator
 
-### Coins
-- R$ 1.00
-- R$ 0.50
-- R$ 0.25
-- R$ 0.10
-- R$ 0.05
-- R$ 0.01
+
+After performing the operation, you must print:
+1. The **resulting fraction (not simplified)**
+2. The **simplified fraction**, separated by the `=` symbol
+
+If the fraction **cannot be simplified**, print the same value on both sides of `=`.
+
+---
+
+## ➕➖✖️➗ Operations
+
+Considering:
+- `N1/D1` as the first fraction
+- `N2/D2` as the second fraction
+
+Use the following rules:
+
+- **Sum (`+`)**  
+  \[
+  (N1 \times D2 + N2 \times D1) / (D1 \times D2)
+  \]
+
+- **Subtraction (`-`)**  
+  \[
+  (N1 \times D2 - N2 \times D1) / (D1 \times D2)
+  \]
+
+- **Multiplication (`*`)**  
+  \[
+  (N1 \times N2) / (D1 \times D2)
+  \]
+
+- **Division (`/`)**  
+  \[
+  (N1 \times D2) / (N2 \times D1)
+  \]
 
 ⚠️ Pay attention to the output format:
-- Print the title **`NOTAS:`** before listing the banknotes
-- Print the title **`MOEDAS:`** before listing the coins
-- Print the values in the **exact order** shown
-- Print a **line break** after each line
-- Follow the **Portuguese format exactly** as in the examples
+- Always print the **unsimplified result first**
+- Then print ` = ` followed by the **simplified fraction**
+- Print a **line break** after each result
 
 ---
 
 ## 📥 Input
 
-The input file contains:
-- **1 floating-point value** `N` `(0 ≤ N ≤ 1,000,000.00)`
-- The value has **two decimal places**
+The input starts with:
+- **1 integer `N`** `(1 ≤ N ≤ 10⁴)` — number of test cases
+
+Each of the next `N` lines contains:
+- A rational value `X`
+- An operation (`+`, `-`, `*`, `/`)
+- Another rational value `Y`
+
+All elements are separated by **spaces**, following this format:
+
+N1 / D1 op N2 / D2
 
 ---
 
 ## 📤 Output
 
-Print:
-- The minimum quantity of each **banknote**
-- Followed by the minimum quantity of each **coin**
+For each test case, print:
 
-The output must follow **exactly** this structure:
+A/B = C/D
 
-NOTAS:  
-A nota(s) de R$ 100.00  
-B nota(s) de R$ 50.00  
-C nota(s) de R$ 20.00  
-D nota(s) de R$ 10.00  
-E nota(s) de R$ 5.00  
-F nota(s) de R$ 2.00  
-MOEDAS:  
-G moeda(s) de R$ 1.00  
-H moeda(s) de R$ 0.50  
-I moeda(s) de R$ 0.25  
-J moeda(s) de R$ 0.10  
-K moeda(s) de R$ 0.05  
-L moeda(s) de R$ 0.01
+
+Where:
+- `A/B` is the **resulting fraction (not simplified)**
+- `C/D` is the **simplified fraction**
 
 ---
 
 ## 🧪 Examples
 
 ### Input
-576.73
+4
+1 / 2 + 3 / 4
+1 / 2 - 3 / 4
+2 / 3 * 6 / 6
+1 / 2 / 3 / 4
+
 
 ### Output
-NOTAS:  
-5 nota(s) de R$ 100.00  
-1 nota(s) de R$ 50.00  
-1 nota(s) de R$ 20.00  
-0 nota(s) de R$ 10.00  
-1 nota(s) de R$ 5.00  
-0 nota(s) de R$ 2.00  
-MOEDAS:  
-1 moeda(s) de R$ 1.00  
-1 moeda(s) de R$ 0.50  
-0 moeda(s) de R$ 0.25  
-2 moeda(s) de R$ 0.10  
-0 moeda(s) de R$ 0.05  
-3 moeda(s) de R$ 0.01
-
----
-
-### Input
-4.00
-
-### Output
-NOTAS:  
-0 nota(s) de R$ 100.00  
-0 nota(s) de R$ 50.00  
-0 nota(s) de R$ 20.00  
-0 nota(s) de R$ 10.00  
-0 nota(s) de R$ 5.00  
-2 nota(s) de R$ 2.00  
-MOEDAS:  
-0 moeda(s) de R$ 1.00  
-0 moeda(s) de R$ 0.50  
-0 moeda(s) de R$ 0.25  
-0 moeda(s) de R$ 0.10  
-0 moeda(s) de R$ 0.05  
-0 moeda(s) de R$ 0.01
-
----
-
-### Input
-91.01
-
-### Output
-NOTAS:  
-0 nota(s) de R$ 100.00  
-1 nota(s) de R$ 50.00  
-2 nota(s) de R$ 20.00  
-0 nota(s) de R$ 10.00  
-0 nota(s) de R$ 5.00  
-0 nota(s) de R$ 2.00  
-MOEDAS:  
-1 moeda(s) de R$ 1.00  
-0 moeda(s) de R$ 0.50  
-0 moeda(s) de R$ 0.25  
-0 moeda(s) de R$ 0.10  
-0 moeda(s) de R$ 0.05  
-1 moeda(s) de R$ 0.01  
+10/8 = 5/4
+-2/8 = -1/4
+12/18 = 2/3
+4/6 = 2/3
