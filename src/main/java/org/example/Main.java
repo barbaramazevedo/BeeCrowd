@@ -1,62 +1,55 @@
 package org.example;
-import java.util.Locale;
-import java.util.Scanner;
+import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in).useLocale(Locale.US);
 
+        int city = 1;
 
-        int quantity = sc.nextInt();
+        while (true) {
+            int quantity = sc.nextInt();
+            if (quantity == 0) break;
 
-        for (int i = 0; i < quantity; i++) {
+            Map<Integer, Integer> map = new TreeMap<>();
 
+            int totalResidents = 0;
+            int totalConsumption = 0;
 
-            int N1 = sc.nextInt();
-            sc.next();
-            int D1 = sc.nextInt();
+            for (int i = 0; i < quantity; i++) {
 
-            String OP = sc.next();
+                int residents = sc.nextInt();
+                int consumption = sc.nextInt();
 
-            int N2 = sc.nextInt();
-            sc.next();
-            int D2 = sc.nextInt();
+                int consumptionPerPerson = consumption / residents;
 
-            int num = 0;
-            int den = 0;
+                map.put(
+                        consumptionPerPerson,
+                        map.getOrDefault(consumptionPerPerson, 0) + residents
+                );
 
-            if (OP.equals("+")) {
-                num=  (N1*D2 + N2*D1);
-                den= (D1*D2);
-            } else if (OP.equals("-")) {
-                num=  (N1*D2 - N2*D1);
-                den= (D1*D2);
-            } else if (OP.equals("*")) {
-                num = (N1 * N2);
-                den = (D1 * D2);
-            } else if (OP.equals("/")) {
-                num = (N1 * D2);
-                den = (N2 * D1);
+                totalResidents += residents;
+                totalConsumption += consumption;
             }
-            int divisor = mdc(num, den);
 
-            int simpNum = num / divisor;
-            int simpDen = den / divisor;
+            System.out.println("Cidade# " + city +":");
 
-            System.out.println(num + "/" + den + " = " + simpNum + "/" + simpDen);
+            boolean first = true;
+            for (Map.Entry<Integer, Integer> entry : map.entrySet()) {
+                if (!first) System.out.print(" ");
+                System.out.print(entry.getValue() + "-" + entry.getKey());
+                first = false;
+            }
+            System.out.println();
+
+            double average = (double) totalConsumption / totalResidents;
+            average = Math.floor(average * 100) / 100;
+
+            System.out.printf(Locale.US, "Consumo medio: %.2f m3.%n", average );
+
+
+        city++;
         }
         sc.close();
-    }
-
-    static int mdc(int a, int b) {
-        a = Math.abs(a);
-        b = Math.abs(b);
-
-        while (b != 0) {
-            int temp = a % b;
-            a = b;
-            b = temp;
-        }
-        return a;
     }
 }
